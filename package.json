@@ -1,0 +1,22 @@
+{
+  "name": "leetcodebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sugarboo/leetcodebase.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sugarboo/leetcodebase/issues"
+  },
+  "homepage": "https://github.com/sugarboo/leetcodebase#readme",
+  "dependencies": {
+    "vitest": "^2.0.4"
+  }
+}
