@@ -82,3 +82,7 @@ function twoSum3(nums: number[], target: number): number[] {
 export function twoSum(nums: number[], target: number): number[] {
   return twoSum3(nums, target)
 }
+
+/**
+ * Solution Reference: https://medium.com/@ChrisBader/code-conquer-leetcode-1-two-sum-1c5562b040af
+ */

@@ -65,6 +65,9 @@ export function isPalindrome3(x: number): boolean {
 /**
  * Solution 4: Compare with Reverse
  * 
+ * Time Complexity: O(log(n))
+ * Space Complexity: O(1)
+ * 
  * @param x 
  */
 export function isPalindrome4(x: number): boolean {
@@ -87,3 +90,7 @@ export function isPalindrome4(x: number): boolean {
 export function isPalindrome(x: number): boolean {
   return isPalindrome4(x)
 }
+
+/**
+ * Solution Reference: https://medium.com/@AlexanderObregon/solving-the-palindrome-number-on-leetcode-typescript-solutions-walkthrough-5a73c58f9974
+ */
