@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { twoSum } from '../code/easy/1-Two-Sum'
+import { twoSum } from '../../code/easy/00001-Two-Sum'
 
 describe('Two-Sum Test Case 🥇', () => {
   it('should return the expected number array', () => {

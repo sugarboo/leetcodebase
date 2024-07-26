@@ -11,7 +11,7 @@
 function twoSum1(nums: number[], target: number): number[] {
   const len = nums.length
 
-  for(let i = 0; i < len - 1; i++) {
+  for(let i = 0; i < len; i++) {
       const a = nums[i]
       for(let j = i + 1; j < len; j++) {
           const b = nums[j]
