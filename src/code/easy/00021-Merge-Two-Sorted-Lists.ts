@@ -14,11 +14,7 @@ interface ListNode {
   next: ListNode | null
 }
 
-function mergeTwoSortedLists1<T>(list1: T[], list2: T[]): T[] {
-  return [...list1, ...list2].sort((a, b) => Number(a) - Number(b))
-}
-
-function mergeTwoSortedLists2(list1: ListNode | null, list2: ListNode | null): ListNode | null {
+function mergeTwoSortedLists1(list1: ListNode | null, list2: ListNode | null): ListNode | null {
   if (list1 === null) {
     return list2
   }
@@ -26,15 +22,19 @@ function mergeTwoSortedLists2(list1: ListNode | null, list2: ListNode | null): L
     return list1
   }
   else if (list1.val < list2.val) {
-    list1.next = mergeTwoSortedLists2(list1.next, list2)
+    list1.next = mergeTwoSortedLists1(list1.next, list2)
     return list1
   }
   else {
-    list2.next = mergeTwoSortedLists2(list1, list2.next)
+    list2.next = mergeTwoSortedLists1(list1, list2.next)
     return list2
   }
 }
 
+function mergeTwoSortedLists2<T>(list1: T[], list2: T[]): T[] {
+  return [...list1, ...list2].sort((a, b) => Number(a) - Number(b))
+}
+
 export function mergeTwoSortedLists<T>(list1: T[], list2: T[]): T[] {
-  return mergeTwoSortedLists1(list1, list2)
+  return mergeTwoSortedLists2(list1, list2)
 }
