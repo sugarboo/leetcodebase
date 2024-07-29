@@ -1,8 +1,8 @@
 /**
  * Solution 1: Convert to String Array and Iterate
- * 
- * @param x 
- * @returns 
+ *
+ * @param x
+ * @returns
  */
 export function isPalindrome1(x: number): boolean {
   let result = true
@@ -22,12 +22,12 @@ export function isPalindrome1(x: number): boolean {
 
 /**
  * Solution 2: Convert to String and Reverse
- * 
+ *
  * Time Complexity: O(n)
  * Space Complexity: O(n)
- * 
- * @param x 
- * @returns 
+ *
+ * @param x
+ * @returns
  */
 export function isPalindrome2(x: number): boolean {
   const original = x.toString()
@@ -38,12 +38,12 @@ export function isPalindrome2(x: number): boolean {
 
 /**
  * Solution 3: Revert Half of the Number
- * 
+ *
  * Time Complexity: O(log(n))
  * Space Complexity: O(1)
- * 
- * @param x 
- * @returns 
+ *
+ * @param x
+ * @returns
  */
 export function isPalindrome3(x: number): boolean {
   // Return false if the number is negative or ends with 0 (but is not 0 itself)
@@ -55,7 +55,7 @@ export function isPalindrome3(x: number): boolean {
   // Keep reversing the second half of the number until it's greater or equal to the first half
   while (x > revertedNumber) {
     revertedNumber = revertedNumber * 10 + x % 10
-    x = Math.floor(x  / 10)
+    x = Math.floor(x / 10)
   }
 
   // Check if the first half and the second half (or second half / 10) are equal
@@ -64,11 +64,11 @@ export function isPalindrome3(x: number): boolean {
 
 /**
  * Solution 4: Compare with Reverse
- * 
+ *
  * Time Complexity: O(log(n))
  * Space Complexity: O(1)
- * 
- * @param x 
+ *
+ * @param x
  */
 export function isPalindrome4(x: number): boolean {
   // If the number is negative, it can't be palindrome
@@ -76,7 +76,8 @@ export function isPalindrome4(x: number): boolean {
     return false
   }
 
-  let original = x, reversed = 0
+  const original = x
+  let reversed = 0
   // Reverse the number mathematically
   while (x !== 0) {
     reversed = reversed * 10 + x % 10

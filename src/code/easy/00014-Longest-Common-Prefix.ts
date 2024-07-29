@@ -1,12 +1,12 @@
 function longestCommonPrefix1(strs: string[]): string {
-  const shortestLength = Math.min(...strs.map((str) => str.length))
+  const shortestLength = Math.min(...strs.map(str => str.length))
 
   let result = ''
   if (strs && strs.length && shortestLength) {
     for (let i = 0; i < shortestLength; i++) {
-      const arr = strs.map((str) => str[i])
+      const arr = strs.map(str => str[i])
       const char = arr[0]
-      if (arr.every((s) => s === char)) {
+      if (arr.every(s => s === char)) {
         result += char
       }
     }

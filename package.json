@@ -2,21 +2,25 @@
   "name": "leetcodebase",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "vitest"
-  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/sugarboo/leetcodebase#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sugarboo/leetcodebase.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/sugarboo/leetcodebase/issues"
   },
-  "homepage": "https://github.com/sugarboo/leetcodebase#readme",
-  "dependencies": {
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.24.0",
+    "typescript": "^5.5.4",
     "vitest": "^2.0.4"
   }
 }

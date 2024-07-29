@@ -1,10 +1,10 @@
 /**
  * Solution 1: Switch and Expected Brackets Stack
- * 
- * @param s 
- * @returns 
+ *
+ * @param s
+ * @returns
  */
-function isValid1(s: string):boolean {
+function isValid1(s: string): boolean {
   // Initialize an array to store the closing brackets expected
   const expectedBrackets: string[] = []
 
@@ -12,7 +12,7 @@ function isValid1(s: string):boolean {
   for (let i = 0; i < s.length; i++) {
     const char = s[i]
     // Push the closing equivalent of any open brackets found
-    switch(char) {
+    switch (char) {
       case '(': {
         expectedBrackets.push(')')
         break
@@ -41,17 +41,17 @@ function isValid1(s: string):boolean {
 
 /**
  * Solution 2: While loop with replace
- * 
- * @param s 
- * @returns 
+ *
+ * @param s
+ * @returns
  */
 function isValid2(s: string): boolean {
   let str = s
 
-  while(
-    str.includes('()') ||
-    str.includes('[]') ||
-    str.includes('{}')
+  while (
+    str.includes('()')
+    || str.includes('[]')
+    || str.includes('{}')
   ) {
     str = str
       .replace('()', '')

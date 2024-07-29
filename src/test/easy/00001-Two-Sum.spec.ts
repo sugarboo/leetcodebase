@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 
 import { twoSum } from '../../code/easy/00001-Two-Sum'
 
-describe('Two-Sum Test Case 🥇', () => {
+describe('two-sum test case 🥇', () => {
   it('should return the expected number array', () => {
     const nums = [2, 7, 11, 15]
     const target = 9
@@ -11,7 +11,7 @@ describe('Two-Sum Test Case 🥇', () => {
   })
 })
 
-describe('Two-Sum Test Case 🥈', () => {
+describe('two-sum test case 🥈', () => {
   it('should return the expected number array', () => {
     const nums = [3, 2, 4]
     const target = 6
@@ -20,7 +20,7 @@ describe('Two-Sum Test Case 🥈', () => {
   })
 })
 
-describe('Two-Sum Test Case 🥉', () => {
+describe('two-sum test case 🥉', () => {
   it('should return the expected number array', () => {
     const nums = [3, 3]
     const target = 6

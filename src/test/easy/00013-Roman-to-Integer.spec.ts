@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { romanToInt } from '../../code/easy/00013-Roman-to-Integer'
 
-describe('Roman to Integer Test Case 🥇', () => {
+describe('roman to integer test case 🥇', () => {
   it('should return the expected number', () => {
     const s = 'III'
     const expected = 3
@@ -9,7 +9,7 @@ describe('Roman to Integer Test Case 🥇', () => {
   })
 })
 
-describe('Roman to Integer Test Case 🥈', () => {
+describe('roman to integer test case 🥈', () => {
   it('should return the expected number', () => {
     const s = 'LVIII'
     const expected = 58
@@ -17,7 +17,7 @@ describe('Roman to Integer Test Case 🥈', () => {
   })
 })
 
-describe('Roman to Integer Test Case 🥉', () => {
+describe('roman to integer test case 🥉', () => {
   it('should return the expected number', () => {
     const s = 'MCMXCIV'
     const expected = 1994

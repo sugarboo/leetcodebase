@@ -1,8 +1,8 @@
 /**
  * Solution 1: Hashmap and Iterate the Roman String
- * 
- * @param s 
- * @returns 
+ *
+ * @param s
+ * @returns
  */
 function romanToInt1(s: string): number {
   const map = {
@@ -22,14 +22,15 @@ function romanToInt1(s: string): number {
   }
   const len = s.length
 
-  let total = 0, i = 0
-  while(i < len) {
+  let total = 0; let i = 0
+  while (i < len) {
     const curr = s[i]
     const next = i < len - 1 ? s[i + 1] : ''
     if (map[`${curr}${next}`]) {
       total += map[`${curr}${next}`]
       i += 2
-    } else if (map[curr]) {
+    }
+    else if (map[curr]) {
       total += map[curr]
       i++
     }
@@ -40,12 +41,12 @@ function romanToInt1(s: string): number {
 
 /**
  * Solution 2: Iterative Approach
- * 
+ *
  * Time Complexity: O(n)
  * Space Complexity: O(1)
- * 
- * @param s 
- * @returns 
+ *
+ * @param s
+ * @returns
  */
 function romanToInt2(s: string): number {
   const map = {
@@ -58,7 +59,8 @@ function romanToInt2(s: string): number {
     M: 1000,
   }
 
-  let total = 0, prev = 0
+  let total = 0
+  let prev = 0
   for (let i = 0; i < s.length; i++) {
     const curr = map[s[i]]
     // If current value is greater than the previous value, subtract twice the previous value; Otherwise, add current value to the sum
@@ -72,12 +74,12 @@ function romanToInt2(s: string): number {
 
 /**
  * Solution 3: Using Map for Flexibility
- * 
+ *
  * Time Complexity: O(n)
  * Space Complexity: O(1)
- * 
- * @param s 
- * @returns 
+ *
+ * @param s
+ * @returns
  */
 function romanToInt3(s: string): number {
   const roman = new Map([
@@ -90,14 +92,15 @@ function romanToInt3(s: string): number {
     ['M', 1000],
   ])
 
-  let total = 0, prev = 0
+  let total = 0; let prev = 0
 
   for (let i = 0; i < s.length; i++) {
     const curr = roman.get(s[i])!
     // If the current value is greater than the previous value, subtract the previous value; Otherwise, add the previous value
     if (curr > prev) {
       total -= prev
-    } else {
+    }
+    else {
       total += prev
     }
     // Update the previous value for next iteration
