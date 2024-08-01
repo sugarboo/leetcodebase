@@ -8,6 +8,8 @@ function longestCommonPrefix1(strs: string[]): string {
       const char = arr[0]
       if (arr.every(s => s === char)) {
         result += char
+      } else {
+        break
       }
     }
   }
