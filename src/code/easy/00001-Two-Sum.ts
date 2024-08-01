@@ -44,11 +44,9 @@ function twoSum2(nums: number[], target: number): number[] {
     const sum = numbers[left].num + numbers[right].num
     if (sum === target) {
       return [numbers[left].index, numbers[right].index]
-    }
-    else if (sum < target) {
+    } else if (sum < target) {
       left++
-    }
-    else {
+    } else {
       right--
     }
   }

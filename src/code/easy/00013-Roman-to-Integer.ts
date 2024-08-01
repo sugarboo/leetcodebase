@@ -29,8 +29,7 @@ function romanToInt1(s: string): number {
     if (map[`${curr}${next}`]) {
       total += map[`${curr}${next}`]
       i += 2
-    }
-    else if (map[curr]) {
+    } else if (map[curr]) {
       total += map[curr]
       i++
     }
@@ -99,8 +98,7 @@ function romanToInt3(s: string): number {
     // If the current value is greater than the previous value, subtract the previous value; Otherwise, add the previous value
     if (curr > prev) {
       total -= prev
-    }
-    else {
+    } else {
       total += prev
     }
     // Update the previous value for next iteration
