@@ -1,21 +1,22 @@
 export class Calculator {
-  #result: number = 0
+  private result: number = 0
+
   constructor(value: number) {
-    this.#result = value
+    this.result = value
   }
 
   add(value: number): Calculator {
-    this.#result += value
+    this.result += value
     return this
   }
 
   subtract(value: number): Calculator {
-    this.#result -= value
+    this.result -= value
     return this
   }
 
   multiply(value: number): Calculator {
-    this.#result *= value
+    this.result *= value
     return this
   }
 
@@ -23,17 +24,17 @@ export class Calculator {
     if (value === 0) {
       throw new Error('Division by zero is not allowed')
     } else {
-      this.#result /= value
+      this.result /= value
     }
     return this
   }
 
   power(value: number): Calculator {
-    this.#result **= value
+    this.result **= value
     return this
   }
 
   getResult(): number {
-    return this.#result
+    return this.result
   }
 }

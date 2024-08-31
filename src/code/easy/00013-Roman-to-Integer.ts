@@ -22,7 +22,8 @@ function romanToInt1(s: string): number {
   }
   const len = s.length
 
-  let total = 0; let i = 0
+  let total = 0
+  let i = 0
   while (i < len) {
     const curr = s[i]
     const next = i < len - 1 ? s[i + 1] : ''
@@ -91,7 +92,8 @@ function romanToInt3(s: string): number {
     ['M', 1000],
   ])
 
-  let total = 0; let prev = 0
+  let total = 0
+  let prev = 0
 
   for (let i = 0; i < s.length; i++) {
     const curr = roman.get(s[i])!

@@ -1,16 +1,16 @@
 export class ArrayWrapper {
-  #nums: number[] = []
+  private nums: number[] = []
 
   constructor(nums: number[]) {
-    this.#nums = nums
+    this.nums = nums
   }
 
   valueOf(): number {
-    return this.#nums.reduce((curr, next) => curr + next, 0)
+    return this.nums.reduce((accum, curr) => accum + curr, 0)
   }
 
   toString(): string {
-    return `[${this.#nums.join(',')}]`
+    return `[${this.nums.join(',')}]`
   }
 };
 

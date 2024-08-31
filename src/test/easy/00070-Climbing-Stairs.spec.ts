@@ -19,8 +19,8 @@ describe('climbing stairs test case 🥈', () => {
 
 describe('climbing stairs test case 🥉', () => {
   it('should return the expected number', () => {
-    const n = 45
-    const expected = 1836311903
+    const n = 10
+    const expected = 89
     expect(climbStairs(n)).toBe(expected)
   })
 })

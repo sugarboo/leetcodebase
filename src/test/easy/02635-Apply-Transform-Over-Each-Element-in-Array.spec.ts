@@ -1,29 +1,29 @@
 import { describe, expect, it } from 'vitest'
-import { filter } from '../../code/easy/02634-Filter-Elements-from-Array'
+import { map } from '../../code/easy/02635-Apply-Transform-Over-Each-Element-in-Array'
 
 describe('apply transform over each element in array test case 🥇', () => {
   it('should return the expected array', () => {
-    const greaterThan10 = n => n > 10
-    const arr = [0, 10, 20, 30]
-    const expected = [20, 30]
-    expect(filter(arr, greaterThan10)).toStrictEqual(expected)
+    const plusOne = n => n + 1
+    const arr = [1, 2, 3]
+    const expected = [2, 3, 4]
+    expect(map(arr, plusOne)).toStrictEqual(expected)
   })
 })
 
 describe('apply transform over each element in array test case 🥈', () => {
   it('should return the expected array', () => {
-    const firstIndex = (n, i) => i === 0
+    const plusI = (n, i) => n + i
     const arr = [1, 2, 3]
-    const expected = [1]
-    expect(filter(arr, firstIndex)).toStrictEqual(expected)
+    const expected = [1, 3, 5]
+    expect(map(arr, plusI)).toStrictEqual(expected)
   })
 })
 
 describe('apply transform over each element in array test case 🥉', () => {
   it('should return the expected array', () => {
-    const plusOne = n => n + 1
-    const arr = [-2, -1, 0, 1, 2]
-    const expected = [-2, 0, 1, 2]
-    expect(filter(arr, plusOne)).toStrictEqual(expected)
+    const constant = (_n, _i) => 42
+    const arr = [10, 20, 30]
+    const expected = [42, 42, 42]
+    expect(map(arr, constant)).toStrictEqual(expected)
   })
 })

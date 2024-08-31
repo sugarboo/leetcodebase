@@ -16,3 +16,18 @@ describe('merge sorted array test case 🥇', () => {
     expect(results).toStrictEqual(expected)
   })
 })
+
+describe('merge sorted array test case 🥈', () => {
+  it('should return the expected element ', () => {
+    const kthLargest = new KthLargest(4, [7, 7, 7, 7, 8, 3])
+
+    const result1 = kthLargest.add(2)
+    const result2 = kthLargest.add(10)
+    const result3 = kthLargest.add(9)
+    const result4 = kthLargest.add(9)
+    const results = [result1, result2, result3, result4]
+    const expected = [7, 7, 7, 8]
+
+    expect(results).toStrictEqual(expected)
+  })
+})
