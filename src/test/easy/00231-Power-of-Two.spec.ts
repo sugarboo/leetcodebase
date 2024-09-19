@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest'
-import { summaryRanges } from '../../code/easy/00228-Summary-Ranges'
 import { isPowerOfTwo } from '../../code/easy/00231-Power-of-Two'
 
 describe('power of two test case 🥇', () => {
