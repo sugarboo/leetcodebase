@@ -1,0 +1,32 @@
+import { describe, expect, it } from 'vitest'
+import { CustomStack } from '../../code/medium/01381-Design-a-Stack-With-Increment-Operation'
+
+describe('design a stack with increment operation test case 🥇', () => {
+  it('should return the expected result', () => {
+    const stack = new CustomStack(3)
+    stack.push(1)
+    expect(stack.stack).toStrictEqual([1])
+    stack.push(2)
+    expect(stack.stack).toStrictEqual([1, 2])
+    expect(stack.pop()).toBe(2)
+    expect(stack.stack).toStrictEqual([1])
+    stack.push(2)
+    expect(stack.stack).toStrictEqual([1, 2])
+    stack.push(3)
+    expect(stack.stack).toStrictEqual([1, 2, 3])
+    stack.push(4)
+    expect(stack.stack).toStrictEqual([1, 2, 3])
+    stack.increment(5, 100)
+    expect(stack.stack).toStrictEqual([101, 102, 103])
+    stack.increment(2, 100)
+    expect(stack.stack).toStrictEqual([201, 202, 103])
+    expect(stack.pop()).toBe(103)
+    expect(stack.stack).toStrictEqual([201, 202])
+    expect(stack.pop()).toBe(202)
+    expect(stack.stack).toStrictEqual([201])
+    expect(stack.pop()).toBe(201)
+    expect(stack.stack).toStrictEqual([])
+    expect(stack.pop()).toBe(-1)
+    expect(stack.pop()).toBe(-1)
+  })
+})
