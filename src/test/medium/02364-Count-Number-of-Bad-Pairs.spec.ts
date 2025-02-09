@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { countBadPairs } from '../../code/easy/02364-Count-Number-of-Bad-Pairs'
+import { countBadPairs } from '../../code/medium/02364-Count-Number-of-Bad-Pairs'
 
 describe('count number of bad pairs test case 🥇', () => {
   it('should return the expected number', () => {
