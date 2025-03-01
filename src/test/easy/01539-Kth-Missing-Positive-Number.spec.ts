@@ -6,7 +6,7 @@ describe('find kth positive test case 🥇', () => {
     const nums = [2, 3, 4, 7, 11]
     const k = 5
     const result = findKthPositive(nums, k)
-    const expected = 4
+    const expected = 9
     expect(result).toBe(expected)
   })
 })
