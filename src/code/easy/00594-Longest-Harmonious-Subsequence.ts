@@ -1,20 +1,22 @@
 export function findLHS(nums: number[]): number {
-  let res = 0
-  const map: Record<string, number> = {}
+  let ans = 0
+  const freq = new Map<number, number>()
 
-  // Populate the hashmap with counts of each number
   nums.forEach((num) => {
-    map[`${num}`] = (map[`${num}`] || 0) + 1
+    if (!freq.has(num)) {
+      freq.set(num, 1)
+    } else {
+      freq.set(num, freq.get(num)! + 1)
+    }
   })
 
-  // Iterate over the keys in hashmap
-  for (const key of Object.keys(map)) {
-    // Convert key back to number
-    const num = Number.parseInt(key)
-    if (map[`${num + 1}`]) {
-      res = Math.max(map[key] + map[`${num + 1}`], res)
+  for (const num of freq.keys()) {
+    if (!freq.has(num + 1)) {
+      continue
     }
+
+    ans = Math.max(ans, freq.get(num)! + freq.get(num + 1)!)
   }
 
-  return res
+  return ans
 }
