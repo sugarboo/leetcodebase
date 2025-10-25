@@ -1,10 +1,8 @@
 export function totalMoney(n: number): number {
-  let balance = 0
-
-  for (let i = 1; i <= n; i++) {
-    // weeks === Math.floor(i / 7); weekdays === i % 7
-    balance += Math.floor(i / 7) + (i % 7 === 0 ? (7 - 1) : i % 7)
+  let sum = 0
+  for (let i = 0; i < n; i++) {
+    sum += Math.floor(i / 7) + i % 7 + 1
   }
 
-  return balance
+  return sum
 }
