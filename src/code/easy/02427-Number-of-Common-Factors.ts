@@ -1,0 +1,11 @@
+export function commonFactors(a: number, b: number): number {
+  let ans = 0
+
+  for (let x = 1; x <= Math.min(a, b); x++) {
+    if (a % x === 0 && b % x === 0) {
+      ans++
+    }
+  }
+
+  return ans
+}
