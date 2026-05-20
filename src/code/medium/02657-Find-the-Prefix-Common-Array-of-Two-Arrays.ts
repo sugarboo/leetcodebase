@@ -1,4 +1,8 @@
 export function findThePrefixCommonArray(nums1: number[], nums2: number[]): number[] {
+  return findThePrefixCommonArray2(nums1, nums2)
+}
+
+function findThePrefixCommonArray1(nums1: number[], nums2: number[]): number[] {
   const len = nums1.length
 
   const prefixCommonArray = Array.from({ length: len }, () => 0) as number[]
@@ -24,4 +28,27 @@ export function findThePrefixCommonArray(nums1: number[], nums2: number[]): numb
 
   // Return the final array with counts of common elements in each prefix
   return prefixCommonArray
+}
+
+function findThePrefixCommonArray2(A: number[], B: number[]): number[] {
+  const n = A.length
+  const freqA = new Set<number>()
+  const freqB = new Set<number>()
+  const freq = new Set<number>()
+  const ans: number[] = []
+
+  for (let i = 0; i < n; i++) {
+    freqA.add(A[i])
+    freqB.add(B[i])
+
+    if (freqB.has(A[i])) {
+      freq.add(A[i])
+    }
+    if (freqA.has(B[i])) {
+      freq.add(B[i])
+    }
+    ans.push(freq.size)
+  }
+
+  return ans
 }
