@@ -1,4 +1,8 @@
 export function maxNumberOfBalloons(text: string): number {
+  return maxNumberOfBalloons2(text)
+}
+
+function maxNumberOfBalloons1(text: string): number {
   const balloonMap = new Map<string, number>([
     ['b', 1],
     ['a', 1],
@@ -24,4 +28,39 @@ export function maxNumberOfBalloons(text: string): number {
   }
 
   return minInstances
+}
+
+function maxNumberOfBalloons2(text: string): number {
+  // Counts of 'a', 'b', 'l', 'o', 'n'
+  const cnt: number[] = Array(5).fill(0)
+
+  for (const letter of text) {
+    switch (letter) {
+      case 'a': {
+        cnt[0]++
+        break
+      }
+      case 'b': {
+        cnt[1]++
+        break
+      }
+      case 'l': {
+        cnt[2] += 0.5
+        break
+      }
+      case 'o': {
+        cnt[3] += 0.5
+        break
+      }
+      case 'n': {
+        cnt[4]++
+        break
+      }
+      default: {
+        break
+      }
+    }
+  }
+
+  return Math.floor(Math.min(...cnt))
 }
