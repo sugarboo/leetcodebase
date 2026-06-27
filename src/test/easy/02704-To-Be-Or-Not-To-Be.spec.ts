@@ -14,7 +14,7 @@ describe('to be or not to be test case 🥈', () => {
     try {
       expect(myExpect(5).toBe(null)).toBe(expected)
     } catch (error) {
-      expect(error.message).toBe('Not Equal')
+      expect((error as Error)?.message).toBe('Not Equal')
     }
   })
 })

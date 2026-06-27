@@ -1,20 +1,20 @@
 interface ToBeOrNotToBe {
-  toBe: (val: any) => boolean
-  notToBe: (val: any) => boolean
+  toBe: (val: unknown) => boolean
+  notToBe: (val: unknown) => boolean
 }
 
-export function myExpect(val: any): ToBeOrNotToBe {
-  const isEqual = (val, expected) => val === expected
+export function myExpect(val: unknown): ToBeOrNotToBe {
+  const isEqual = (val: unknown, expected: unknown) => val === expected
 
   return {
-    toBe: (expected: any) => {
+    toBe: (expected: unknown) => {
       const result = isEqual(val, expected)
       if (!result) {
         throw new Error('Not Equal')
       }
       return result
     },
-    notToBe: (expected: any) => {
+    notToBe: (expected: unknown) => {
       const result = !isEqual(val, expected)
       if (!result) {
         throw new Error('Equal')
