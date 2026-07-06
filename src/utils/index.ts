@@ -13,3 +13,11 @@ export function isPrimeNumber(num: number): boolean {
   // No divisors found, so it's a prime number
   return true
 }
+
+export function gcd(x: number, y: number) {
+  if (y === 0) {
+    return x
+  } else {
+    return gcd(y, x % y)
+  }
+}
