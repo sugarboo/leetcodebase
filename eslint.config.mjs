@@ -4,6 +4,7 @@ export default antfu({
   stylistic: {
     semi: false,
     quotes: 'single',
+    indent: 2,
   },
   rules: {
     'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
