@@ -1,4 +1,4 @@
-function removeOuterParentheses(s: string): string {
+export function removeOuterParentheses(s: string): string {
   let ans = ''
   let depth = 0
   for (const c of s) {
